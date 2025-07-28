@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section>
+        <div id="loggin">
+            <form action="" id="loginForm">
+                <div class="image">
+                    <img src="image/log 1.png" alt="log 1">
+                    <h2>Log in</h2>
+                </div>
+                <label for="text">Email</label>
+                <input type="email" id="login-email" placeholder="Enter your email">
+                <span id="error-email"></span>
+                <label for="text">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password">
+                <span id="error-password"></span>
+                <div class="log-check">
+                    <input type="checkbox" id="logPasswordShow">
+                    <label for="text">Show Password</label>
+                </div>
+                <button type="submit" id="logIn">Log In</button>
+            </form>
+        </div>
+        <div id="register">
+            <form  id="registerForm">
+                <h3>Register Form</h3>
+                <label for="text">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <span id="name-error"></span>
+                <label for="text">Email</label>
+                <input type="email" id="email" placeholder="Enter your Email">
+                <span id="email-error"></span>
+                <label for="text">Phone Number</label>
+                <input type="number" id="Phonenumber" placeholder="Enter your Phone Number">
+                <span id="PhoneNumber-error"></span>
+                <label for="text">password</label>
+                <input type="password" id="password" placeholder="Create your Password">
+                <span id="password-error"></span>
+                <div class="show-password">
+                    <input type="checkbox" id="password-show">
+                    <label for="text">Show password</label>
+                </div>
+                <label for="text">Confirm password</label>
+                <input type="password" id="cpassword" placeholder="Re-enter your Password">
+                <span id="cpassword-error"></span>
+                <div class="checkbox">
+                    <input id="agree" type="checkbox">
+                    <label for="text">Agree to conditions</label>
+                </div>
+                <span id="agree-error"></span>
+                <button type="submit" id="registernow">Register Now</button>
+            </form>
+        </div>
+        <div id="showImage">
+            <img src="image/smart logo.jpg" alt="smart logo">
+        </div>
+        
+    </section>
+    
+    <script src="index.js"></script>
+</body>
+</html>
