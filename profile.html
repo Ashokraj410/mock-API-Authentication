@@ -8,45 +8,120 @@
     <script src="https://kit.fontawesome.com/3329bf17c6.js"></script>
 </head>
 <body>
-    <header>
-        <img src="image/ima-1.webp" alt="profile">
-        <h2>JAMES<span>ANDERSON</span></h2>
-        <button id="signout">Signout</button>
-    </header>
-    <section id="Home">
-        <div class="cards">
-            <div class="card">
-                <h6>Lorem ipsum dolor sit</h6>
-                <img src="image/log 1.png" alt="">
-
-            </div>
-            <div class="card">
-                <h6>Lorem ipsum dolor sit</h6>
-                <img src="image/img 1.png" alt="img 1">
-            </div>
-            <div class="card">
-                <h6>Lorem ipsum dolor sit</h6>
-                <img src="image/smart logo.jpg" alt="">
-            </div>
+    <section>
+        <div class="side-nav">
+            <ul>
+                <li><img src="image/pro 3.jpeg" alt=""></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Experince">Experince</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><button id="signOutBtn">Sign Out</button></li>
+            </ul>
         </div>
-        <div class="info">
-            <div class="links">
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-messenger"></i></a>
-                <a href="https://www.facebook.com/instagram/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="feedback">
-                <label for="text">Name: <input type="text" placeholder="Enter your name"></label>
-                <label for="text">Email: <input type="email" placeholder="Enter your Email"></label>
-                <label for="text">Feedback:</label>
-                <textarea name="text" id="feedback"></textarea>
-                <button type="submit">Submit</button>
+        <div class="content" id="About">
+            <div class="one">
+                <div class="first">
+                    <h1>Ashokraj<span>A</span></h1>
+                    <h3>ashokraja07274@gamil.com</h3>
+                    <h3>+91 9786881429</h3>
+                    <h3>Ariyalur</h3>
+                </div>
+                <hr>
+                <div class="second">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Ratione consectetur nihil, expedita ullam illo laudantium accusantium mollitia ipsum, et qui deleniti
+                       quas numquam cumque culpa, magni nemo fuga dolore! Atque, sit officiis. Repudiandae, voluptatem asperiores!
+                    </p>
+                </div>
+                <div class="links">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
 
+                </div>
             </div>
+            <div id="Experince">
+                <div class="de-one">
+                    <h2>Senior Web Developer</h2>
+                    <h4>INTELITEC SOLUTIONS</h4>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                    <div class="date">
+                        <h4>September 2021</h4>
+                    </div>
+                </div>
+                <div class="de-one">
+                    <h2>WEB DEVELOPER</h2>
+                    <h4>INTELITEC SOLUTIONS</h4>
+                    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                    <div class="date"> 
+                        <h4>March 2023</h4>
+                    </div>
+                </div>
+                <div class="de-one">
+                    <h2>Junior Web Designer</h2>
+                    <h4>shout! Media Productions</h4>
+                    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+                    <div class="date">
+                        <h4>April 2019</h4>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="Education">
+                <h1>EDUCATION</h1>
+                <div class="qualification">
+                    <div>
+                        <h2>R.v.s Technical campus-Coimbatore</h2>
+                        <h5>BACHELOR OF ENGINEERING</h5>
+                        <h6>Agriculture Engineering</h6>
+                        <h6>CGPA-7.6%</h6>
+                    </div>
+                    <div>
+                        <h2>M.R HR.SEC.SCHOOL</h2>
+                        <h5>H.S.C---82%</h5>
+                    </div>
+
+                </div>
+                
+            </div>
+            <hr>
+            <div id="Skills">
+                <div>
+                    <h1>Skills</h1>
+                </div>
+                <div class="s-logo"> 
+                    <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="">
+                    <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/external-css-document-written-in-a-markup-language-logo-tritone-tal-revivo.png" alt="">
+                    <img src="https://img.icons8.com/ios/50/javascript-logo.png" alt="">
+                    <img src="https://img.icons8.com/color/48/json--v1.png" alt="">
+                    <img src="https://img.icons8.com/dotty/80/react.png" alt="">
+                </div>
+                
+            </div>
+
         </div>
-        
     </section>
     
+
+
+    <script>
+        const signoutBtn=document.getElementById("signOutBtn");
+         
+        signoutBtn.addEventListener('click',()=>{
+            //clear user identity from URL by replacing history state
+            history.replaceState({}, document.title, window.location.pathname);
+            
+            if(confirm("Are you sure you want to log out?")){
+                window.location.href="index.html?status=loggedout"
+            }else{
+                window.location.href="profile.html"
+            }
+
+            
+        })
+    </script>
 </body>
 </html>

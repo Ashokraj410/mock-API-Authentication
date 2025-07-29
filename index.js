@@ -41,7 +41,7 @@ document.getElementById("registerForm").addEventListener('submit',async function
         document.getElementById("PhoneNumber-error").innerText="Enter valid 10 digit PhoneNumber!";
         isValid=false;
     }
-    if(Password ===""||passRegex.test(Password)){
+    if(Password ===""||!passRegex.test(Password)){
         document.getElementById("password-error").innerText="Enter valid Password!";
         isValid=false;
     }
@@ -62,8 +62,7 @@ document.getElementById("registerForm").addEventListener('submit',async function
         name:userName,
         email:Email,
         phonenumber:Phonenumber,
-        password:Password,
-        cPassword:Cpassword
+        password:Password
     };
     fetch(ENDPOINT,{
         method:'POST',
@@ -76,8 +75,11 @@ document.getElementById("registerForm").addEventListener('submit',async function
     .then(data=>{
         alert("Successfully Register user details!");
         document.getElementById("registerForm").reset();
-        register.style.display="none";
+        register.style.display="none"
+        firstImage.style.display="none"
         showImage.style.display='flex';
+        loggin.style.display="flex"
+        
     })
     .catch(err => console.error("Error:", err));
     }
@@ -93,6 +95,8 @@ toggle.addEventListener('change',()=>{
     passwordInput.type=type;
 });
 
+
+
 //log in function
 
 document.getElementById("loginForm").addEventListener('submit',async function (e) {
@@ -102,9 +106,38 @@ document.getElementById("loginForm").addEventListener('submit',async function (e
 const logEmail=document.getElementById("login-email").value.trim();
 const logPassword=document.getElementById("login-password").value.trim();
 
-document.getElementById('error-email').innerText="";
-document.getElementById('error-password').innerText="";
-})
+const loginError=document.getElementById('error-email');
+const errorPassword=document.getElementById('error-password');
+loginError.innerText="";
+errorPassword.innerText="";
+
+try{
+    const users=await getUsers();
+    const matchedEmail=users.find(user =>
+        user.email.toLowerCase() ===logEmail.toLowerCase()
+    );
+    if(!matchedEmail){
+        loginError.innerText=" please enter valid Email";
+    }
+    const matchedPassword=users.find(user => 
+        user.password===logPassword
+    );
+    if(!matchedPassword){
+        errorPassword.innerText="Enter valid Password";
+        return;
+
+    }
+    window.location.href=`profile.html?id=${encodeURIComponent(matchedEmail.id)}`;
+
+
+}catch(err){
+    console.error(err);
+    loginError.innerText="Please Enter your valid Email!";
+    errorPassword.innerText="Please Enter your valid Password"
+}
+
+
+});
 //log in page show password code 
 
 const passwordLog=document.getElementById('login-password');
@@ -113,3 +146,15 @@ toggleLog.addEventListener('change',()=>{
     const type=toggleLog.checked?"text":"password";
     passwordLog.type=type;
 });
+
+
+//To click register button go to register page(div-id)
+let firstImage=document.getElementById("firstImage");
+
+document.getElementById("register-btn").addEventListener('click',()=>{
+    loggin.style.display="none"
+    showImage.style.display='none';
+    firstImage.style.display="flex"
+    register.style.display="flex"
+
+})
